@@ -16,7 +16,7 @@ const client = new Client({
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const BOT_PREFIX = process.env.BOT_PREFIX || '!';
 const GUILD_ID = process.env.GUILD_ID;
-const ALLOWED_VERIFY_CHANNEL = process.env.VERIFY_CHANNEL_ID || '1386648426955018290';
+const ALLOWED_VERIFY_CHANNEL = process.env.VERIFY_CHANNEL_ID;
 
 if (!BOT_TOKEN) {
   console.error('❌ BOT_TOKEN tidak ditemukan dalam environment variables!');
