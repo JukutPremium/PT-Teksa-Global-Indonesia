@@ -259,7 +259,7 @@ client.on('messageCreate', async message => {
     const inputCode = args[0];
 
     if (!inputCode) {
-      const reply = await message.reply('❌ Harap masukkan kode verifikasi. Contoh: `!verify TxW2025`');
+      const reply = await message.reply('❌ Harap masukkan kode verifikasi. Contoh: `!verify Admin123`');
       setTimeout(() => {
         reply.delete().catch(() => {});
         message.delete().catch(() => {});
