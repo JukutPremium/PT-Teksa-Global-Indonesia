@@ -1,10 +1,26 @@
 {
-  "name": "discord-verifikasi-bot",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "teksa-bot",
+  "version": "2.0.0",
+  "description": "Discord bot dengan sistem verifikasi role menggunakan kode",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
   "dependencies": {
-    "discord.js": "^14.0.0",
-    "dotenv": "^16.5.0"
-  }
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "verification",
+    "role",
+    "modular"
+  ],
+  "author": "Shaka Pratama",
+  "license": "MIT"
 }

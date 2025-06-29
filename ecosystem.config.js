@@ -22,7 +22,8 @@ module.exports = {
       
       // Environment
       env: {
-        NODE_ENV: "development"
+        NODE_ENV: "development",
+        watch: true  // Enable watch di production
       },
       env_production: {
         NODE_ENV: "production",
@@ -46,10 +47,7 @@ module.exports = {
       kill_timeout: 3000,
       wait_ready: true,
       listen_timeout: 8000,
-      
-      // Auto start saat laptop dihidupkan
-      // Tidak perlu cron restart karena watch sudah aktif
-      
+
       // Advanced options
       merge_logs: true,
       combine_logs: true,
@@ -63,14 +61,14 @@ module.exports = {
   ],
   
   // Deploy configuration (opsional)
-//   deploy: {
-//     production: {
-//       user: "node",
-//       host: "localhost", 
-//       ref: "origin/master",
-//       repo: "git@github.com:your-username/discord-bot.git",
-//       path: "/var/www/discord-bot",
-//       "post-deploy": "npm install && pm2 reload ecosystem.config.js --env production"
-//     }
-//   }
+  deploy: {
+    production: {
+      user: "node",
+      host: "localhost", 
+      ref: "origin/master",
+      repo: "git@github.com:your-username/discord-bot.git",
+      path: "/var/www/discord-bot",
+      "post-deploy": "npm install && pm2 reload ecosystem.config.js --env production"
+    }
+  }
 };
