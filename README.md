@@ -118,11 +118,18 @@ Create `codes.json` file for verification system:
 ## File Structure
 ```
 project/
-├── index.js              # Main bot file
-├── codes.json          # Verification codes mapping
-├── .env               # Environment variables
-├── package.json       # Dependencies
-└── README.md          # This documentation
+├── index.js              # Main entry point to run the bot
+├── commands/             # Folder containing modular bot commands
+│   ├── verify.js         # Command to verify users (e.g. using a code)
+│   ├── activity.js       # Command to set or display the bot's activity
+│   └── hostinfo.js       # Command to show host/server information
+├── variables/
+│   └── codes.json        # JSON file to store verification codes and related data
+├── utils/
+│   └── logger.js         # Custom logging utility
+├── .env                  # Environment variables file (e.g. for storing the bot token)
+├── package.json          # Project metadata and dependencies
+└── README.md             # Project documentation
 ```
 
 ## Security Features
