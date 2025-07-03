@@ -118,17 +118,26 @@ Create `codes.json` file for verification system:
 ## File Structure
 ```
 project/
-├── index.js              # Main bot file
-├── codes.json          # Verification codes mapping
-├── .env               # Environment variables
-├── package.json       # Dependencies
-└── README.md          # This documentation
+├── index.js              # Main entry point to run the bot
+├── commands/             # Folder containing modular bot commands
+│   ├── verify.js         # Command to verify users (e.g. using a code)
+│   ├── activity.js       # Command to set or display the bot's activity
+│   └── hostinfo.js       # Command to show host/server information
+│   └── security.js       # Command to show statistic security for verification
+├── variables/
+│   └── codes.json        # JSON file to store verification codes and related data
+├── utils/
+│   └── logger.js         # Custom logging utility
+│   └── security.js       # Custom security utility
+├── .env                  # Environment variables file (e.g. for storing the bot token)
+├── package.json          # Project metadata and dependencies
+└── README.md             # Project documentation
 ```
 
 ## Security Features
 
 ### Permission Control
-- Admin-only commands for `!hostinfo` and `!activity`
+- Admin-only commands for `!hostinfo`, `!activity`, `!security`
 - Channel restriction for `!verify`
 - Automatic message cleanup to prevent spam
 
@@ -321,10 +330,14 @@ pm2 startup
 - Follow Discord.js best practices
 
 ## Changelog
+### ADD
+> - Verification Logs & Security
+> - New Command : !security [stats|report|clean]
 
 ### Version 1.0.0
 - Initial release
 - Role verification system
+- Verification Logs
 - Host information monitoring
 - Activity management
 - Auto-cleanup functionality

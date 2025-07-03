@@ -136,7 +136,9 @@ async function testCommands() {
 
 function setCustomActivity() {
   const activities = [
-    { name: 'DEMO : PT Teksa Digital Indonesia', type: ActivityType.Watching },
+    { name: 'PT Teksa Digital Indonesia', type: ActivityType.Watching },
+    { name: 'Shaka Pratama', type: ActivityType.Watching },
+    { name: 'Claude AI', type: ActivityType.Watching },
   ];
 
   const activity = activities[Math.floor(Math.random() * activities.length)];
