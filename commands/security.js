@@ -3,7 +3,7 @@ const { EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const SecurityUtils = require('../utils/security');
 
 module.exports = {
-    name: 'verification security',
+    name: 'security',
     description: 'Menampilkan statistik keamanan dan aktivitas verifikasi',
     usage: '!security [stats|report|clean]',
 
